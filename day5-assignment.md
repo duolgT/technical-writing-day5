@@ -25,23 +25,79 @@ Step 7: Select "Public" as the repository visibility.
 Expected result: The Public option is selected.
 Step 8: Select "Create repository."
 Expected result: GitHub displays the new empty repository page.
-Step 9: Open Git Bash.
-Expected result: A terminal window opens and displays a command prompt.
-Step 10: Create a project folder.
-Expected result: A new folder is created for the project files.
-Step 11: Open the project folder in the terminal.
-Expected result: The terminal is working inside the project folder.
-Step 12: Initialize Git in the project folder.
-Expected result: Git creates a local repository inside the project folder.
-Step 13: Create a project file named README.md.
-Expected result: The README.md file appears in the project folder.
-Step 14: Add the project files to Git's staging area.
-Expected result: Git marks the project files as ready to be committed.
-Step 15: Create the first commit.
-Expected result: Git records the staged files as the first commit in the local repository.
-Step 16: Connect the local repository to the GitHub repository.
-Expected result: The local repository has a remote connection to GitHub.
-Step 17: Push the commit to GitHub.
+**Step 9: Open Git Bash.**
+**Expected result:** A Git Bash terminal window opens and displays a command prompt.
+
+**Step 10: Create the project folder by typing the following command.**
+
+```bash
+mkdir my-first-project
+```
+
+**Expected result:** A folder named `my-first-project` is created.
+
+**Step 11: Move into the project folder by typing the following command.**
+
+```bash
+cd my-first-project
+```
+
+**Expected result:** The terminal is now working inside the `my-first-project` folder.
+
+**Step 12: Initialize Git by typing the following command.**
+
+```bash
+git init
+```
+
+**Expected result:** Git creates a local repository inside the project folder and displays a message indicating that an empty Git repository was initialized.
+
+**Step 13: Create a README file by typing the following command.**
+
+```bash
+echo "# My First Project" > README.md
+```
+
+**Expected result:** A `README.md` file is created inside the project folder.
+
+**Step 14: Add the README file to the staging area by typing the following command.**
+
+```bash
+git add README.md
+```
+
+**Expected result:** Git stages `README.md` so that it can be included in the next commit.
+
+**Step 15: Create the first commit by typing the following command.**
+
+```bash
+git commit -m "Initial commit"
+```
+
+**Expected result:** Git creates the first commit and displays a message showing that the commit was successfully created.
+
+**Step 16: Connect the local repository to the GitHub repository by typing the following command.**
+
+Replace `YOUR-USERNAME` with your GitHub username:
+
+```bash
+git remote add origin https://github.com/YOUR-USERNAME/my-first-project.git
+```
+
+**Expected result:** The local repository is connected to the GitHub repository.
+
+**Step 17: Push the first commit to GitHub by typing the following commands.**
+
+```bash
+git branch -M main
+```
+
+```bash
+git push -u origin main
+```
+
+**Expected result:** Git uploads the commit to GitHub, and `README.md` appears in the online repository.
+
 Expected result: The committed files appear in the GitHub repository.
 Screenshot Description
 Include a screenshot of the GitHub repository page after the first push. The screenshot should show the repository name, the README.md file, and the first commit listed in the repository history. This demonstrates that the local project was successfully uploaded to GitHub.
